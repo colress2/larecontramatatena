@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="laRECONTRAmatatena.PantallaDeCarga">
+    <Position X="1.25" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAIIAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>PantallaDeCarga.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="laRECONTRAmatatena.CambiarPersonaje">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQAEAAABCgAAAACAQAAYAACABAQAABAAAIAAABAAAUI=</HashCode>
+      <FileName>CambiarPersonaje.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="laRECONTRAmatatena.MainWindow">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="laRECONTRAmatatena.MainWindow.Personaje" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MainWindow.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAgCAAAAAAAIAEYAAQAiKgAAAAAAJAAAAQAAFA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Window" Collapsed="true">
+    <Position X="7" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="laRECONTRAmatatena.Jugar">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="laRECONTRAmatatena.Jugar.Entorno" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Jugar.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="laRECONTRAmatatena.Jugar.Enemigo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Jugar.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="laRECONTRAmatatena.Jugar.Personaje" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Jugar.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="laRECONTRAmatatena.Jugar.Tablero2Celda" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Jugar.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="laRECONTRAmatatena.Jugar.Tablero1Celda" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Jugar.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AICJQJWxLsEHpBgEqgBYAw6X4KttOYADAJDDMjCtJFQ=</HashCode>
+      <FileName>Jugar.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="laRECONTRAmatatena.ElegirComoJugar">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAgAAgCAAAAAAAAAAIAAQAACAAAAAAAIAAAAAAAEg=</HashCode>
+      <FileName>ElegirComoJugar.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="laRECONTRAmatatena.JugadorvsjugadorMismaMaquina">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="laRECONTRAmatatena.JugadorvsjugadorMismaMaquina.Entorno" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>JugadorvsjugadorMismaMaquina.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="laRECONTRAmatatena.JugadorvsjugadorMismaMaquina.Enemigo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>JugadorvsjugadorMismaMaquina.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="laRECONTRAmatatena.JugadorvsjugadorMismaMaquina.Personaje" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>JugadorvsjugadorMismaMaquina.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="laRECONTRAmatatena.JugadorvsjugadorMismaMaquina.Tablero2Celda" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>JugadorvsjugadorMismaMaquina.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="laRECONTRAmatatena.JugadorvsjugadorMismaMaquina.Tablero1Celda" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>JugadorvsjugadorMismaMaquina.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ACyFUJSxLsEHJBgEKgRYgw4X4KttOYABIJDDejCtJFQ=</HashCode>
+      <FileName>JugadorvsjugadorMismaMaquina.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="laRECONTRAmatatena.ConectarPvPDiferenteMaquina">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAABAAQgAAACAAACAAEIAAQAECABAAABAAIAAAAABEA=</HashCode>
+      <FileName>ConectarPvPDiferenteMaquina.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

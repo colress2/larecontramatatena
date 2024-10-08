@@ -1,0 +1,128 @@
+﻿<Window x:Class="laRECONTRAmatatena.Elegir2Jugador"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:local="clr-namespace:laRECONTRAmatatena"
+        mc:Ignorable="d"
+        Title="laRECONTRAmatatena" Height="720" Width="1144"
+        Background="DarkGray"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="CustomButtonStyle" TargetType="Button" BasedOn="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <!-- Circular Border -->
+                            <Border x:Name="border" Background="Transparent" BorderThickness="0" CornerRadius="63"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="Gold"/>
+                                <Setter TargetName="border" Property="Opacity" Value="0.5"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="False">
+                                <Setter TargetName="border" Property="Background" Value="Transparent"/>
+                                <Setter TargetName="border" Property="Opacity" Value="1.0"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="Botones" TargetType="Button" BasedOn="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <!-- Circular Border -->
+                            <Border x:Name="border" Background="Transparent" BorderThickness="0" CornerRadius="20"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF901313"/>
+                                <Setter TargetName="border" Property="Opacity" Value="0.8"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="False">
+                                <Setter TargetName="border" Property="Background" Value="Transparent"/>
+                                <Setter TargetName="border" Property="Opacity" Value="1.0"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="188*"/>
+            <RowDefinition Height="180*"/>
+            <RowDefinition Height="323*"/>
+        </Grid.RowDefinitions>
+        <Image Source="Imagenes/fondo_original.png" HorizontalAlignment="Left" Height="714" VerticalAlignment="Top" Width="1226" Margin="0,0,-88,-23" Grid.RowSpan="3"/>
+        <Image Source="Imagenes/j2selecciona_personaje.png" HorizontalAlignment="Center" Height="212" Width="750" Margin="0,-42,0,22"/>
+        <Image Source="Imagenes/marco2.jpg" HorizontalAlignment="Left" Height="212" Margin="98,129,0,0" VerticalAlignment="Top" Width="151" Grid.RowSpan="2"/>
+        <Image Source="Imagenes/marco2.jpg" HorizontalAlignment="Left" Height="212" Margin="285,129,0,0" VerticalAlignment="Top" Width="151" Grid.RowSpan="2"/>
+        <Image Source="Imagenes/marco2.jpg" HorizontalAlignment="Left" Height="212" Margin="475,129,0,0" VerticalAlignment="Top" Width="151" Grid.RowSpan="2"/>
+        <Image Source="Imagenes/marco2.jpg" HorizontalAlignment="Left" Height="212" Margin="665,129,0,0" VerticalAlignment="Top" Width="151" Grid.RowSpan="2"/>
+        <Image Source="Imagenes/marco2.jpg" HorizontalAlignment="Left" Height="212" Margin="855,129,0,0" VerticalAlignment="Top" Width="151" Grid.RowSpan="2"/>
+        <Image Source="Imagenes/marco2.jpg" HorizontalAlignment="Left" Height="212" Margin="855,28,0,0" VerticalAlignment="Top" Width="151" Grid.Row="2"/>
+        <Image Source="Imagenes/marco2.jpg" HorizontalAlignment="Left" Height="212" Margin="475,28,0,0" VerticalAlignment="Top" Width="151" Grid.Row="2"/>
+        <Image Source="Imagenes/marco2.jpg" HorizontalAlignment="Left" Height="212" Margin="285,28,0,0" VerticalAlignment="Top" Width="151" Grid.Row="2"/>
+        <Image Source="Imagenes/marco2.jpg" HorizontalAlignment="Left" Height="212" Margin="95,28,0,0" VerticalAlignment="Top" Width="151" Grid.Row="2"/>
+        <Image Source="Imagenes/marco2.jpg" HorizontalAlignment="Left" Height="212" Margin="665,28,0,0" VerticalAlignment="Top" Width="151" Grid.Row="2"/>
+        <Button x:Name="btnCordero" Background="Transparent" HorizontalAlignment="Stretch" Margin="110,158,902,91" VerticalAlignment="Stretch" Click="PersonajeCordero" BorderThickness="0" Cursor="Hand" Style="{StaticResource CustomButtonStyle}" Grid.RowSpan="2">
+            <Image gif:ImageBehavior.AnimatedSource="Imagenes/Cordero.gif" RenderTransformOrigin="0.463,0.492"></Image>
+        </Button>
+        <Button Background="Transparent" HorizontalAlignment="Left" Margin="292,157,0,0" VerticalAlignment="Top" Width="126" Height="120" Click="PersonajePenitente" BorderThickness="0" Cursor="Hand" Style="{StaticResource CustomButtonStyle}" Grid.RowSpan="2">
+            <Image gif:ImageBehavior.AnimatedSource="Imagenes/Penitente.gif"></Image>
+        </Button>
+        <Button Background="Transparent" HorizontalAlignment="Left" Margin="488,157,0,0" VerticalAlignment="Top" Width="126" Height="120" Click="PersonajeShovelKnight" BorderThickness="0" Cursor="Hand" Style="{StaticResource CustomButtonStyle}" Grid.RowSpan="2">
+            <Image gif:ImageBehavior.AnimatedSource="Imagenes/ShovelKnight.gif" ></Image>
+        </Button>
+        <Button Background="Transparent" HorizontalAlignment="Left" Margin="678,157,0,0" VerticalAlignment="Top" Width="126" Height="120" Click="PersonajeFlowey" BorderThickness="0" Cursor="Hand" Style="{StaticResource CustomButtonStyle}" Grid.RowSpan="2">
+            <Image gif:ImageBehavior.AnimatedSource="Imagenes/Flowey.gif"></Image>
+        </Button>
+        <Button Background="Transparent" HorizontalAlignment="Left" Margin="867,157,0,0" VerticalAlignment="Top" Width="126" Height="120" Click="PersonajeBadeline" BorderThickness="0" Cursor="Hand" Style="{StaticResource CustomButtonStyle}" Grid.RowSpan="2">
+            <Image gif:ImageBehavior.AnimatedSource="Imagenes/Badeline.gif"></Image>
+        </Button>
+        <Button Background="Transparent" HorizontalAlignment="Left" Margin="110,61,0,0" VerticalAlignment="Top" Width="126" Height="120" Click="PersonajeCaptainViridian" BorderThickness="0" Cursor="Hand" Style="{StaticResource CustomButtonStyle}" Grid.Row="2">
+            <Image gif:ImageBehavior.AnimatedSource="Imagenes/CaptainViridian.gif"></Image>
+        </Button>
+        <Button Background="Transparent" HorizontalAlignment="Left" Margin="298,61,0,0" VerticalAlignment="Top" Width="126" Height="120" Click="PersonajeIsaac" BorderThickness="0" Cursor="Hand" Style="{StaticResource CustomButtonStyle}" Grid.Row="2">
+            <Image gif:ImageBehavior.AnimatedSource="Imagenes/Isaac.gif"></Image>
+        </Button>
+        <Button Background="Transparent" HorizontalAlignment="Left" Margin="488,61,0,0" VerticalAlignment="Top" Width="126" Height="120" Click="PersonajeClubPenguin" BorderThickness="0" Cursor="Hand" Style="{StaticResource CustomButtonStyle}" Grid.Row="2">
+            <Image gif:ImageBehavior.AnimatedSource="Imagenes/ClubPenguin.gif"></Image>
+        </Button>
+        <Button Background="Transparent" HorizontalAlignment="Left" Margin="686,61,0,0" VerticalAlignment="Top" Width="126" Height="120" Click="PersonajeDrFetus" BorderThickness="0" Cursor="Hand" Style="{StaticResource CustomButtonStyle}" Grid.Row="2">
+            <Image gif:ImageBehavior.AnimatedSource="Imagenes/DrFetus.gif" Height="98" Width="186"></Image>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="873,61,0,0" VerticalAlignment="Top" Width="126" Height="120" Click="PersonajeTacaXeraca" Cursor="Hand" Style="{StaticResource CustomButtonStyle}" Grid.Row="2">
+            <Image gif:ImageBehavior.AnimatedSource="Imagenes/TacaXeraca.gif"/>
+        </Button>
+        <Button BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" Margin="1124,310,0,0" VerticalAlignment="Top" Width="14" Height="13" Cursor="Hand" Click="Personajeruben" Grid.Row="2" />
+        <Label Content="EL Cordero" Foreground="White" HorizontalAlignment="Left" Margin="140,138,0,0" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Impact" Height="25" Width="62" Grid.Row="1"/>
+        <Label Content="EL Penitente" Foreground="White" HorizontalAlignment="Left" Margin="326,136,0,0" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Impact" Grid.Row="1"/>
+        <Label Content="Shovel Knight" Foreground="White" HorizontalAlignment="Left" Margin="510,136,0,0" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Impact" Grid.Row="1"/>
+        <Label Content="Flowey" Foreground="White" HorizontalAlignment="Left" Margin="716,136,0,0" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Impact" Grid.Row="1"/>
+        <Label Content="Badeline" Foreground="White" HorizontalAlignment="Left" Margin="905,136,0,0" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Impact" Grid.Row="1"/>
+        <Label Content="Captain Viridian" Foreground="White" HorizontalAlignment="Left" Margin="124,223,0,0" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Impact" Grid.Row="2"/>
+        <Label Content="Isaac" Foreground="White" HorizontalAlignment="Left" Margin="342,223,0,0" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Impact" Grid.Row="2"/>
+        <Label Content="Pingüino" Foreground="White" HorizontalAlignment="Left" Margin="522,223,0,0" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Impact" Grid.Row="2"/>
+        <Label Content="Dr Fetus" Foreground="White" HorizontalAlignment="Left" Margin="716,223,0,0" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Impact" Grid.Row="2"/>
+        <Label Content="Zero" Foreground="White" HorizontalAlignment="Left" Margin="914,223,0,0" VerticalAlignment="Top" FontStyle="Italic" FontFamily="Impact" Grid.Row="2"/>
+        <Button HorizontalAlignment="Left" Margin="448,266,0,0" Background="Black" BorderThickness="0" VerticalAlignment="Top" Width="206" Height="50" Style="{StaticResource Botones}" Click="Button_Click" Cursor="Hand" Grid.Row="2">
+            <Image Source="Imagenes/botonSalirMenu.png" Width="195"/>
+        </Button>
+    </Grid>
+</Window>

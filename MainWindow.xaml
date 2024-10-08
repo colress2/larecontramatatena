@@ -1,0 +1,85 @@
+﻿<Window x:Class="laRECONTRAmatatena.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:local="clr-namespace:laRECONTRAmatatena"
+        mc:Ignorable="d"
+        Title="laRECONTRAmatatena" Height="720" Width="1144"
+        Background="DarkGray"       
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="Botones" TargetType="Button" BasedOn="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <!-- Circular Border -->
+                            <Border x:Name="border" Background="Transparent" BorderThickness="0" CornerRadius="20"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF901313"/>
+                                <Setter TargetName="border" Property="Opacity" Value="0.8"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="False">
+                                <Setter TargetName="border" Property="Background" Value="Transparent"/>
+                                <Setter TargetName="border" Property="Opacity" Value="1.0"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Image Source="Imagenes/fondo_PantallaDeCarga.png" HorizontalAlignment="Left" Height="716" VerticalAlignment="Top" Width="1156" Margin="0,0,-18,-25"/>
+        <Image Source="Imagenes/marco2.jpg" HorizontalAlignment="Left" Height="192" VerticalAlignment="Top" Width="151"/>
+        <!--PERSONAJE-->
+        <ItemsControl BorderThickness="0" ItemsSource="{Binding ListaPersonaje}" Margin="0,0,981.6,513.4">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FlowDirection="LeftToRight" Columns="{Binding PersonajeColumnas}" Rows="{Binding PersonajeFilas}"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button BorderThickness="0" FontWeight="Bold" PreviewMouseLeftButtonDown="ClicIzq" Background="Transparent" Cursor="Hand" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                        <Image gif:ImageBehavior.AnimationSpeedRatio="1" gif:ImageBehavior.AnimatedSource="{Binding personaje}" HorizontalAlignment="Stretch"/>
+                    </Button>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <!---->
+        <Image Source="Imagenes/laRECONTRAmatatena.png" Margin="305,22,305,538"/>
+        <Button HorizontalAlignment="Left" Background="Black" BorderThickness="0" Margin="436,198,0,0" VerticalAlignment="Top" Width="260" Height="56" Style="{StaticResource Botones}" Cursor="Hand" Click="Jugar">
+            <Image Source="Imagenes/botonJugar.png" Width="240" Height="50"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Background="Black" BorderThickness="0" Margin="436,285,0,0" VerticalAlignment="Top" Width="260" Height="56" Style="{StaticResource Botones}" Cursor="Hand" Click="JugarCo_op">
+            <Image Source="Imagenes/botonJugarPvP.png" Width="240" Height="50"/>
+        </Button>
+        <Button x:Name="BtnComoJugar" HorizontalAlignment="Left" Background="Black" BorderThickness="0" Margin="436,371,0,0" VerticalAlignment="Top" Width="260" Height="56" Style="{StaticResource Botones}" Cursor="Hand" Click="ComoJugar">
+            <Image Source="Imagenes/botonComoJugar.png" Width="240" Height="50"/>
+        </Button>
+        <Button x:Name="BtnOpciones" HorizontalAlignment="Left" Background="Black" BorderThickness="0" Margin="436,460,0,0" VerticalAlignment="Top" Width="260" Height="56" Style="{StaticResource Botones}" Cursor="Hand" Click="Opciones">
+            <Image Source="Imagenes/botonOpciones.png" Width="240" Height="50"/>
+        </Button>
+        <Button x:Name="BtnSalir" HorizontalAlignment="Left" Background="Black" BorderThickness="0" Margin="436,551,0,0" VerticalAlignment="Top" Width="260" Height="56" Style="{StaticResource Botones}" Cursor="Hand" Click="Salir">
+            <Image Source="Imagenes/botonSalir.png" Width="240" Height="50" Cursor=""/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="56,562,0,0" VerticalAlignment="Top" Width="90" Height="90" Style="{StaticResource Botones}" Cursor="Hand" Click="Creditos">
+            <Image Source="Imagenes/iconoCreditos.png" Width="80" Height="80" Cursor=""/>
+        </Button>
+        <Border HorizontalAlignment="Left" Height="166" VerticalAlignment="Top" Width="146"/>
+        <Image gif:ImageBehavior.AnimatedSource="Imagenes/fuego.gif" HorizontalAlignment="Left" Height="95" Margin="217,22,0,0" VerticalAlignment="Top" Width="83"/>
+        <Image gif:ImageBehavior.AnimatedSource="Imagenes/fuego.gif" HorizontalAlignment="Left" Height="85" Margin="839,22,0,0" VerticalAlignment="Top" Width="82"/>
+        <Image gif:ImageBehavior.AnimatedSource="Imagenes/antorcha.png" HorizontalAlignment="Left" Height="46" Margin="854,104,0,0" VerticalAlignment="Top" Width="52"/>
+        <Label Foreground="AntiqueWhite" x:Name="lblNombrePersonaje" HorizontalAlignment="Left" Margin="20,190,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.554" FontStyle="Italic" FontFamily="Impact"/>
+        <Image gif:ImageBehavior.AnimatedSource="/Imagenes/antorcha.png" HorizontalAlignment="Left" Height="47" Margin="229,104,0,0" VerticalAlignment="Top" Width="59"/>
+    </Grid>
+</Window>

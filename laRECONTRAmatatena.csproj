@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F46D9F04-E49C-473E-8BA7-9B9BF7FF2132}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>laRECONTRAmatatena</RootNamespace>
+    <AssemblyName>laRECONTRAmatatena</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>The-D6.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9e7cd3b544a090dc, processorArchitecture=MSIL">
+      <HintPath>packages\WpfAnimatedGif.2.0.2\lib\net40\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="CambiarPersonaje.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComoJugar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConectarPvPDiferenteMaquina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Creditos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ElegirComoJugar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JugadorvsjugadorDiferenteMaquina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JugadorvsjugadorMismaMaquina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Jugar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elegir2Jugador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CambiarPersonaje.xaml.cs">
+      <DependentUpon>CambiarPersonaje.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComoJugar.xaml.cs">
+      <DependentUpon>ComoJugar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConectarPvPDiferenteMaquina.xaml.cs">
+      <DependentUpon>ConectarPvPDiferenteMaquina.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Creditos.xaml.cs">
+      <DependentUpon>Creditos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ElegirComoJugar.xaml.cs">
+      <DependentUpon>ElegirComoJugar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JugadorvsjugadorDiferenteMaquina.xaml.cs">
+      <DependentUpon>JugadorvsjugadorDiferenteMaquina.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JugadorvsjugadorMismaMaquina.xaml.cs">
+      <DependentUpon>JugadorvsjugadorMismaMaquina.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Jugar.xaml.cs">
+      <DependentUpon>Jugar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elegir2Jugador.xaml.cs">
+      <DependentUpon>Elegir2Jugador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Opciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PantallaDeCarga.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Opciones.xaml.cs">
+      <DependentUpon>Opciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaDeCarga.xaml.cs">
+      <DependentUpon>PantallaDeCarga.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\Badeline.gif" />
+    <Resource Include="Imagenes\CaptainViridian.gif" />
+    <Resource Include="Imagenes\ClubPenguin.gif" />
+    <Resource Include="Imagenes\Cordero.gif" />
+    <Resource Include="Imagenes\desierto.gif" />
+    <Resource Include="Imagenes\DrFetus.gif" />
+    <Resource Include="Imagenes\Flowey.gif" />
+    <Resource Include="Imagenes\fuego.gif" />
+    <Resource Include="Imagenes\invierno.gif" />
+    <Resource Include="Imagenes\Isaac.gif" />
+    <Resource Include="Imagenes\lluvia.gif" />
+    <Resource Include="Imagenes\Penitente.gif" />
+    <Resource Include="Imagenes\Pradera.gif" />
+    <Resource Include="Imagenes\ruben.jpg" />
+    <Resource Include="Imagenes\ShovelKnight.gif" />
+    <Resource Include="Imagenes\TacaXeraca.gif" />
+    <Resource Include="Imagenes\tormentaelectrica.gif" />
+    <Resource Include="Imagenes\universo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\reloj.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\dadoDobleDisabled.png" />
+    <Resource Include="Imagenes\dadoDobleEnabled.png" />
+    <Resource Include="Imagenes\dadoEscudoDisabled.png" />
+    <Resource Include="Imagenes\dadoEscudoEnabled.png" />
+    <Resource Include="Imagenes\dadoInversoDisabled.png" />
+    <Resource Include="Imagenes\dadoInversoEnabled.png" />
+    <Resource Include="Imagenes\dadoMorteroDisabled.png" />
+    <Resource Include="Imagenes\dadoMorteroEnabled.png" />
+    <Resource Include="Imagenes\dadoCanceladorDisabled.png" />
+    <Resource Include="Imagenes\dadoCanceladorEnabled.png" />
+    <Resource Include="Imagenes\dadoSantoDisabled.png" />
+    <Resource Include="Imagenes\dadoSantoEnabled.png" />
+    <Resource Include="Imagenes\dadoExplosivoDisabled.png" />
+    <Resource Include="Imagenes\dadoExplosivoEnabled.png" />
+    <Resource Include="The-D6.ico" />
+    <Resource Include="Imagenes\marco2.jpg" />
+    <Resource Include="Imagenes\The-D6.ico" />
+    <Resource Include="Imagenes\fondo_original.png" />
+    <Resource Include="Imagenes\fondo_PantallaDeCarga.png" />
+    <Resource Include="Imagenes\fondo_dado-02-Sheet.png" />
+    <Resource Include="Imagenes\fondo_dado-Sheet.png" />
+    <Resource Include="Imagenes\dice1.png" />
+    <Resource Include="Imagenes\dice10.png" />
+    <Resource Include="Imagenes\dice11.png" />
+    <Resource Include="Imagenes\dice12.png" />
+    <Resource Include="Imagenes\dice13.png" />
+    <Resource Include="Imagenes\dice14.png" />
+    <Resource Include="Imagenes\dice15.png" />
+    <Resource Include="Imagenes\dice16.png" />
+    <Resource Include="Imagenes\dice2.png" />
+    <Resource Include="Imagenes\dice3.png" />
+    <Resource Include="Imagenes\dice4.png" />
+    <Resource Include="Imagenes\dice5.png" />
+    <Resource Include="Imagenes\dice6.png" />
+    <Resource Include="Imagenes\dice7.png" />
+    <Resource Include="Imagenes\dice8.png" />
+    <Resource Include="Imagenes\dice9.png" />
+    <Resource Include="Imagenes\diceRandom.gif" />
+    <Resource Include="Imagenes\selecciona_personaje.png" />
+    <Resource Include="Imagenes\j2selecciona_personaje.png" />
+    <Resource Include="Imagenes\antorcha.png" />
+    <Resource Include="Imagenes\laRECONTRAmatatena.png" />
+    <Resource Include="Imagenes\botonComoJugar.png" />
+    <Resource Include="Imagenes\botonJugar.png" />
+    <Resource Include="Imagenes\botonJugarPvP.png" />
+    <Resource Include="Imagenes\botonSalir.png" />
+    <Resource Include="Imagenes\iconoCreditos.png" />
+    <Resource Include="Imagenes\botonSalirMenu.png" />
+    <Resource Include="Imagenes\botonMismaMaquina.png" />
+    <Resource Include="Imagenes\botonDiferenteMaquina.png" />
+    <Resource Include="Imagenes\botonJugarOnline.png" />
+    <Resource Include="Imagenes\botonJugarDeshabilitado.png" />
+    <Resource Include="Imagenes\botonCrearPartida.png" />
+    <Resource Include="Imagenes\botonCrearPartidaDeshabilitado.png" />
+    <Resource Include="Imagenes\2estrellas.png" />
+    <Resource Include="Imagenes\botonAceptarDadoSanto.png" />
+    <Resource Include="Imagenes\botonDisabled.png" />
+    <Resource Include="Imagenes\botonEnabled.png" />
+    <Resource Include="Imagenes\botonPaAbajo.png" />
+    <Resource Include="Imagenes\botonPaAbajoDissabled.png" />
+    <Resource Include="Imagenes\botonPaArriba.png" />
+    <Resource Include="Imagenes\botonPaArribaDissabled.png" />
+    <Resource Include="Imagenes\botonOpciones.png" />
+    <Resource Include="Imagenes\3estrellas.png" />
+    <Resource Include="Imagenes\4estrellas.png" />
+    <Resource Include="Imagenes\comoJugar.png" />
+    <Resource Include="Imagenes\creditos.png" />
+    <Content Include="Sfx\sfxConectado.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sfx\sfxCongelado.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sfx\sfxDadoBorrado.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sfx\sfxDadoCancelador.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sfx\sfxDadoCanceladorBorrado.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sfx\sfxDadoExplosivo.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sfx\sfxFuego.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sfx\sfxHelado.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sfx\sfxInvertido.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sfx\sfxOk.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sfx\sfxRayo.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sfx\sfxTimeout.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sfx\sfxTransfDadoSanto.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sfx\sfxVolver.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soundtrack\WEXECUTION.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Imagenes\numero0.png" />
+    <Resource Include="Imagenes\numero1.png" />
+    <Resource Include="Imagenes\numero2.png" />
+    <Resource Include="Imagenes\numero3.png" />
+    <Resource Include="Imagenes\numero4.png" />
+    <Resource Include="Imagenes\numero5.png" />
+    <Resource Include="Imagenes\numero6.png" />
+    <Resource Include="Imagenes\numero7.png" />
+    <Resource Include="Imagenes\numero8.png" />
+    <Resource Include="Imagenes\numero9.png" />
+    <Resource Include="Imagenes\botonCancelar.gif" />
+    <Resource Include="Imagenes\estrella.png" />
+    <Resource Include="Imagenes\estrellaVacia.png" />
+    <Resource Include="Imagenes\5estrellas.png" />
+    <Content Include="Soundtrack\Half-Life OST - Closing Theme Extended.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soundtrack\INStage6Theme-Voyage1969.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soundtrack\Metal Slug 3 - Character Select.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soundtrack\Pizza Tower OST - Hip to be Italian %28Peppino%27s Final Judgement%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soundtrack\SonicCDStardustSpeedwayBadFutureJP-EUHD.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Soundtrack\SuperMonkeyBall2OST-World8-ClockTower.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

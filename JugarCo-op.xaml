@@ -1,0 +1,34 @@
+﻿<Window x:Class="laRECONTRAmatatena.JugarCo_op"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laRECONTRAmatatena"
+        mc:Ignorable="d"
+        Title="JugarCo_op" Height="720" Width="1144"
+        Background="DarkGray"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="556" Margin="572,34,0,0" VerticalAlignment="Top" Width="4" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+        <Label FontSize="25" Content="Buscar Partida" HorizontalAlignment="Left" Margin="188,78,0,0" VerticalAlignment="Top" Height="56" Width="170"/>
+        <Label FontSize="25" Content="Crear Partida" HorizontalAlignment="Left" Margin="791,78,0,0" VerticalAlignment="Top"/>
+        <Button Content="Jugar" HorizontalAlignment="Left" Margin="170,419,0,0" VerticalAlignment="Top" Width="218" Height="78" Click="Jugar"/>
+        <Button Content="Salir" HorizontalAlignment="Left" Margin="478,609,0,0" VerticalAlignment="Top" Width="191" Height="70" Click="Salir"/>
+        <Button Content="Crear Servidor" HorizontalAlignment="Left" Margin="758,546,0,0" VerticalAlignment="Top" Width="218" Height="78" Click="BtnCrearServidor"/>
+        <TextBox x:Name="TbBuscarServidor" HorizontalAlignment="Left" Margin="643,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="96"  Width="437"/>
+        <TextBox x:Name="TbCrearServidor" HorizontalAlignment="Left" Margin="66,317,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="85"  Width="426"/>
+        <TextBox x:Name="TbColocarIP" HorizontalAlignment="Left" Margin="66,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="85"  Width="426"/>
+        <Label Content="Introduce la IP del servidor al que deseas conectarte:" FontSize="20" HorizontalAlignment="Left" Margin="42,177,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Tbchat" HorizontalAlignment="Left" Margin="643,433,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="96"  Width="437"/>
+    </Grid>
+</Window>

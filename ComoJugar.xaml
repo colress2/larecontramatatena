@@ -1,0 +1,48 @@
+﻿<Window x:Class="laRECONTRAmatatena.ComoJugar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laRECONTRAmatatena"
+        mc:Ignorable="d"
+        Title="laRECONTRAmatatena" Height="720" Width="1144"
+        Background="DarkGray"       
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Cursor="">
+    <Window.Resources>
+        <Style x:Key="Botones" TargetType="Button" BasedOn="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <!-- Circular Border -->
+                            <Border x:Name="border" Background="Transparent" BorderThickness="0" CornerRadius="20"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF901313"/>
+                                <Setter TargetName="border" Property="Opacity" Value="0.8"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="False">
+                                <Setter TargetName="border" Property="Background" Value="Transparent"/>
+                                <Setter TargetName="border" Property="Opacity" Value="1.0"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Image Source="Imagenes/fondo_original.png" HorizontalAlignment="Left" Height="716" VerticalAlignment="Top" Width="1156" Margin="0,0,-18,-25"/>
+        <Button x:Name="BtnSalir" Background="Black" BorderThickness="0" Margin="0,583,0,0" VerticalAlignment="Top" Width="260" Height="56" Style="{StaticResource Botones}" Cursor="Hand" Click="Salir">
+            <Image Source="Imagenes/botonSalirMenu.png" Height="52"/>
+        </Button>
+        <Label Foreground="DarkRed" FontSize="40" Content="Jugar" HorizontalAlignment="Left" Margin="578,56,0,0" VerticalAlignment="Top" Height="63" Width="110"/>
+        <Label Foreground="AntiqueWhite" FontSize="40" Content="Como" HorizontalAlignment="Left" Margin="460,56,0,0" VerticalAlignment="Top" Height="69" Width="124"/>
+        <Image Source="Imagenes/comoJugar.png" HorizontalAlignment="Left" Height="405" VerticalAlignment="Center" Width="839" Margin="135,0,0,0"/>
+    </Grid>
+</Window>

@@ -1,0 +1,16 @@
+﻿<Window x:Class="laRECONTRAmatatena.PantallaDeCarga"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laRECONTRAmatatena"
+        mc:Ignorable="d"
+        Title="laRECONTRAmatatena" Height="720" Width="1144"
+        Background="DarkGray"       
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+        <Image Source="Imagenes/fondo_original.png" HorizontalAlignment="Left" Height="716" VerticalAlignment="Top" Width="1156" Margin="0,0,-18,-25"/>
+        <ProgressBar x:Name="BarraDeCarga" HorizontalAlignment="Center" Height="32" Margin="0,522,0,0" VerticalAlignment="Top" Width="556" Background="Black" Foreground="Red" Maximum="500"/>
+    </Grid>
+</Window>
